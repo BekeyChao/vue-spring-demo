@@ -3,13 +3,15 @@
   <div id="app" style="height:600px">
     <!-- element的布局 v-if:根据返回值决定是否渲染  -->
     <el-container v-if="isLogin" class="main-container" >
-      <el-header >
+      <el-header class="header">
         <!-- header组件 -->
         <Header></Header>
       </el-header>
       <el-container>
         <!-- 导航组件 -->
-        <Nav></Nav>
+        <el-aside width="150px">
+          <Nav></Nav>
+        </el-aside>
         <el-main>
           <!-- 这里放置的是路由的页面 -->
           <router-view></router-view>
@@ -56,5 +58,8 @@
   /* 加上红色边框看出布局 */
   .el-container, .el-aside {
     border: 1px solid red;
+  }
+  .header {
+    background-color: #3a8ee6;
   }
 </style>

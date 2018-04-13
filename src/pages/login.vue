@@ -25,7 +25,7 @@
   let data = {
     // Vue中如果要双向数据绑定，即使字段为空，也要为其设置默认值
     form: {
-      name: '',
+      name: 'superAdmin',
       password: ''
     },
     msg: '',
